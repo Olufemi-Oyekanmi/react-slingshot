@@ -3,7 +3,7 @@ version: 2.1 ##testing the config
 jobs:
   build:
     docker:
-      - image: circeci/node.13.8.0
+      - image: circeci/node:13.8.0
     steps:
       - checkout
       - run: npm install
@@ -14,7 +14,7 @@ jobs:
   
   test:
     docker:
-      - image: circleci/node.13.8.0
+      - image: circleci/node:13.8.0
     steps:
       - checkout
       - restore_cache:
@@ -25,7 +25,7 @@ jobs:
   
   analyze:
     docker:
-      - image: circle/13.8.0
+      - image: circle/node:13.8.0
     steps:
       - checkout
       - restore_cache:
